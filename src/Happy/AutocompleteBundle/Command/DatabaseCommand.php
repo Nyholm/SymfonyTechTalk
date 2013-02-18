@@ -15,7 +15,7 @@ class DatabaseCommand extends Command {
 	}
 	
 	protected function execute(InputInterface $input, OutputInterface $output) {
-		$actions = array('drop', 'drop-and-reload', 'create', 'reload', 'create-and-load-fixtures', 'drop-and-foobar', 'update');
+		$actions = array('drop', 'drop-and-reload', 'create', 'reload', 'create-and-load-fixtures', 'drop-and-foobar', 'update', 'nothing');
 		sort($actions);//make it alfabetical 
 		
 		//create a validation function and save it into a variable

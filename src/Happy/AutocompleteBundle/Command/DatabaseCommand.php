@@ -15,22 +15,6 @@ class DatabaseCommand extends Command {
 	}
 	
 	protected function execute(InputInterface $input, OutputInterface $output) {
-		$actions = array('drop', 'drop-and-reload', 'create', 'reload', 'create-and-load-fixtures', 'drop-and-foobar', 'update', 'nothing');
-		sort($actions);//make it alfabetical 
 		
-		//create a validation function and save it into a variable
-	    $validation = function ($action) use ($actions) {
-	        if (!in_array($action, array_values($actions))) {
-	            throw new \InvalidArgumentException(sprintf('Action "%s" is invalid.', $action));
-	        }
-	
-	        return $action;
-	    };
-	
-	    // ask and validate the answer
-	    $dialog = $this->getApplication()->getHelperSet()->get('dialog');
-	    $action = $dialog->askAndValidate($output, 'What would you like to do with the database (default is "nothing"): ', $validation, false, 'nothing', $actions);
-	
-	    $output->writeln(sprintf('We are going to perform "%s" on the database.', $action));
 	}
 }

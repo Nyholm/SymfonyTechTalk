@@ -1,3 +1,13 @@
+hemnet_agent:
+    resource: "@HemnetAgentBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+hemnet_house:
+    resource: "@HemnetHouseBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 happy_autocomplete:
     resource: "@HappyAutocompleteBundle/Controller/"
     type:     annotation

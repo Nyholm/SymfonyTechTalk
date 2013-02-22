@@ -21,6 +21,8 @@ class AppKernel extends Kernel
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new Happy\AutocompleteBundle\HappyAutocompleteBundle(),
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
+            new Hemnet\HouseBundle\HemnetHouseBundle(),
+            new Hemnet\AgentBundle\HemnetAgentBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
